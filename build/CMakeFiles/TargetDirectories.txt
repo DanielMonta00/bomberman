@@ -1,0 +1,3 @@
+/home/vdani/Projects/bomberman/build/CMakeFiles/Bomberman.dir
+/home/vdani/Projects/bomberman/build/CMakeFiles/edit_cache.dir
+/home/vdani/Projects/bomberman/build/CMakeFiles/rebuild_cache.dir
