@@ -6,10 +6,6 @@ Tile::Tile(TileType type, sf::Sprite spriteFile)
     sprite.setTextureRect(spriteFile.getTextureRect());
 }
 
-// void Tile::draw(sf::RenderWindow& window) const {
-//     window.draw(sprite);
-// }
-
 bool Tile::isWalkable() const {
     return type == TileType::Empty;
 }
