@@ -56,7 +56,8 @@ void Board::generateRandomBoard () {
             int randomType = rand() % 3; // Assuming 3 types of tiles
             TileType type = static_cast<TileType>(randomType);
             grid[i][j].setType(type);
-            grid[i][j].setSprite(this->sprites[(randomType)]); // Set the sprite for the tile
+            // grid[i][j].getSprite().setTexture(sprites[randomType].getTexture()); // Set the texture for the tile
+            grid[i][j].getSprite().setTextureRect(sprites[randomType].getTextureRect()); // Set the texture rectangle for the tile
         }
     
         // TileType type = static_cast<TileType>(rand() % 3); // Randomly select a tile type

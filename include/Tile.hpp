@@ -12,6 +12,12 @@ class Tile {
 private:
     TileType type;
     sf::Sprite sprite;
+    // float positionX;
+    // float positionY;
+    // // The position of the tile in the grid
+    // // The position of the tile in the grid (row, column)
+    // int row;
+    // int col;
 
 public:
     Tile(TileType type,  sf::Sprite sprite);

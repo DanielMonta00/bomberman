@@ -53,11 +53,22 @@ int main() {
     Board board(BOARD_HEIGHT, BOARD_WIDTH, TILE_SIZE,sprites);
     // get back sprites from the board
     std::vector<sf::Sprite> boardSprites = board.getSprites();
-
-
     board.generateRandomBoard(); // Generate a random board with half of the tiles filled
     // Set some tiles on the board
-
+    // print board types
+    std::vector<std::vector<Tile>> grid=board.getGrid();
+    for (int i = 0; i < BOARD_HEIGHT; ++i) {
+        for (int j = 0; j < BOARD_WIDTH; ++j) {
+            std::cout << static_cast<int>(grid[i][j].getType()) << " ";
+        }
+        std::cout << std::endl;
+    }
+    //print positions
+    for (int i = 0; i < BOARD_HEIGHT; ++i) {
+        for (int j = 0; j < BOARD_WIDTH; ++j) {
+            std::cout << grid[i][j].getSprite().getPosition().x << " " << grid[i][j].getSprite().getPosition().y << std::endl;
+        }
+    }
     // Add tiles to a vector
 
     // Set the position of the tiles
@@ -86,14 +97,14 @@ int main() {
         
         board.draw(window);
 
-        // draw the tiles original tiles
-        for (int i = 0; i < tiles.size(); ++i) {
-            window.draw(tiles[i].getSprite());
-        }
-        //  draw the board sprites
-        for (int i = 0; i < boardSprites.size(); ++i) {
-            window.draw(boardSprites[i]);
-        }
+        // // draw the tiles original tiles
+        // for (int i = 0; i < tiles.size(); ++i) {
+        //     window.draw(tiles[i].getSprite());
+        // }
+        // //  draw the board sprites
+        // for (int i = 0; i < boardSprites.size(); ++i) {
+        //     window.draw(boardSprites[i]);
+        // }
         window.display();
     }
 
